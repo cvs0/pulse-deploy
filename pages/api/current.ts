@@ -4,6 +4,7 @@ import serverAuth from '@/libs/ServerAuth';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
+    console.log(req.method, " was used instead of GET for the current api")
     return res.status(405).end();
   }
 
